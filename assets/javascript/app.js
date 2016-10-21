@@ -3,10 +3,17 @@
 var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
 
 var questions = [
-["What is 10 + 4?", "12" , "14" , "16" , "B"],
-["What is 20 - 9?", "7", "13", "11", "C"],
-["What is 7 x 3?", "21", "24", "25", "A"],
-["What is 8 / 2?", "10", "2", "4", "C"]
+["What cup was the Iocane Poision put in?<br><br> <img src= 'assets/images/poision.jpg'", "Vizzini" , "Both" , "Dread Pirate Roberts" , "B"],
+["What is the Word? <br><br> <img src= 'assets/images/number1.gif'", "Almost Dead", "Murder", "Inconceivable", "C"],
+["Which word means it's the same forward to backward? <br><br> <img src='assets/images/Princess-Bride-DVD-cover.jpg'", "Palindrome", "Plankton", "Inkling", "A"],
+["Does Fezziks hit him with a rock?<br><br> <img src='assets/images/fezziks.jpg'", "Maybe", "Yes", "No", "C"],
+["What does R.O.U.S. stand for?<br><br> <img src='assets/images/rous.png'", "Really Oval Attacking Species", "Random Objects Array Slice", "Rodents Of Unusual Size", "C"],
+["What date did the Princess Bride Come to Theaters?<br><br> <img src='assets/images/images.jpg'", "January 4, 1983", "September 25, 1987", "December 7, 1999", "B"],
+["What is the name of the actor playing the sick boy?<br><br> <img src='assets/images/boy.jpg'", "Fred Savage", "Mark Hamel", "Steven Universe", "A"],
+["Hello. My Name Is ______?<br><br> <img src='assets/images/hello.gif'", "Diago", "Dan", "Inigo Montoya", "C"],
+["Who is this Character?<br><br> <img src='assets/images/miracle.gif'", "Miracle Max", "Magical Matt", "Mad Mittens", "A"],
+["Was the Dread Pirate Roberts Right or Left Handed?<br><br> <img src='assets/images/sword.jpg'", "Left", "Right", "Ambidextrous", "B"]
+
 
 ];
 
@@ -39,6 +46,8 @@ function renderQuestion(){
 	test.innerHTML += "<input type ='radio' name= 'choices' value = 'B'>" + chB + "<br>";
 	test.innerHTML += "<input type ='radio' name= 'choices' value = 'C'>" + chC + "<br><br>";
 	test.innerHTML += "<button onclick = 'checkAnswer ()'>Submit Answer</button>";
+
+	
 }
 //Below: Function to run checkAnswer() to check the answer they submit
 function checkAnswer(){
@@ -64,3 +73,22 @@ function checkAnswer(){
 }
 //Below: When page is loaded it will make the renderQuestion start
 window.addEventListener ("load", renderQuestion, false);
+
+//try timer here and once its submitted timer needs to restart
+	
+	var countDown = (180,"status");//secs=180, elem="status"
+	
+	function countDown(secs,elem){
+		var element = document.getElementById(elem);
+		element.innerHTML = "<h2>Timer Remaining " +secs+ " seconds</h2>";
+		//Below: this will stop timer not run into negative numbers
+		if(secs < 1){
+			clearTimeout(timer);
+			element.innerHTML = '<h2>Countdown Complete!</h2>';
+			element.innerHTML += '<a href="#">Click here to start</a>';
+		}
+
+		secs --;//takes away 1 
+
+		var timer = setTimeout('countDown('+secs+' "'+elem+'")',1000);//timer to remeber new number
+	}
