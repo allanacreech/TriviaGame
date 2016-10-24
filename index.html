@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> - Allana Creech</title>
-
+	<title>Trivia - Allana Creech</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<!-- 	Bootstrap, CSS, & FA Link -->
-	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
-	<!--link to css styling sheet -->
+
+	<!-- 	jQuery, Bootstrap JS, & game JS link -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<!--This link is the bootstrapcdn-->	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!--This is the link to the javascript page-->
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+	<!--This is the link to the css page-->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	
 
 	<!-- Google Font Link -->
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
 </head>
 <body>
 
+	<div class="container-fluid">
+		<button id="startButton" ><h3>Start Trivia</h3></button>
+		<div><h3 id="status"></h3></div>
 
-<div id="status"></div>
+		<!-- <button onclick = 'countDown(10,"status");'>Start Trivia</button> -->
 
-<button onclick = "countDown(180,"status");">Start Trivia</button>
+		<h2 id="test_status"></h2>
+		<div ><h3 id="test"></h3></div>
+		<div><h3 id = "choices">
+			<p><lable id = "A"></lable> <input type ='radio' name= 'choices' value = 'A'></p>
+			<p><lable id = "B"></lable> <input type ='radio' name= 'choices' value = 'B'></p>
+			<p><lable id = "C"></lable> <input type ='radio' name= 'choices' value = 'C'></p>
+		</h3></div>
+		<button id='submitButton'><h3>Submit Answer</h3></button>
 
-<h2 id="test_status"></h2>
-<div id="test"></div>
+		<button id="startAgainButton"><h3>Start over</h3></button>
+
+		<div><h3 id="displayAnswer"></h3></div>
 
 
-<!-- 	jQuery, Bootstrap JS, & game JS link -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-	<script type="text/javascript" src="assets/javascript/app.js"></script>
-
-<!-- Added link to the jQuery Library and game JS -->
-<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-
+		<footer><h3> Allana Creech - UCF BootCamp</h3></footer>
+	</div>
+	<!-- Added link to the jQuery Library and game JS -->
+<!-- <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+-->
 
 </body>
 </html>

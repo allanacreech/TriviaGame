@@ -1,19 +1,57 @@
 
-/*This is background area*/
-body{
-	margin:0px;
-	background-color: white;
+/*This is forcing body to whole page*/
+body{height:100%;
+	width:100%;
+	background: url("../images/Backgrounds.jpg") no-repeat center center fixed; 
+	/*  This should allow the game to resize appropriately*/
+	-webkit-background-size: cover;  
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	/*Keeping all wording in the middle for right now*/
+
+}
+h1, h2 {	
+	font-family: 'Permanent Marker', 'cursive';
+	text-align: center;
+	color: black;
+	border: solid 1px ;
+	background-color: rgb(237,192,91);
 }
 
 
 
-div#test {
-	background-color: white;
-	border: white 1px solid;
+
+#startButton{
+	background-color: pink;
+	border: black 1px solid;
 	padding: 10px 40px 40px 40px;
+
 }
 
-div#test {
-	border: white 1px solid;
-	padding: 10px 40px 40px 40px;
+#status, #test_status,#displayAnswer, footer{
+	font-family: 'Permanent Marker', 'cursive';
+	text-align: center;
+	color: black;
+	border: solid 1px ;
+	background-color: rgb(237,192,91);
+	width: 75%;
+}
+
+
+#test{
+	font-family: 'Permanent Marker', 'cursive';
+	text-align: center;
+	color: black;
+	border: solid 1px ;
+	background-color: rgb(237,192,91);
+	width: 75%;
+}
+
+#choices{
+	font-family: 'Permanent Marker', 'cursive';
+	color: black;
+	border: solid 1px ;
+	background-color: rgb(237,192,91);
+	width: 75%;
 }
